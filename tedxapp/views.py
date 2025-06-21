@@ -25,6 +25,10 @@ class CustomUserCreationForm(UserCreationForm):
         fields = ['username', 'email', 'password1', 'password2', 'role']   # Include 'role' field in the form
 
 
+def home(request):
+    return render(request, 'index.html')  # Render a simple home page template
+
+
 
 def register(request):
     if request.method == 'POST':
