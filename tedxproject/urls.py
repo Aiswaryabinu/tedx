@@ -24,7 +24,7 @@ from tedxapp.views import RegisterView, LoginView
 from django.shortcuts import redirect
 
 urlpatterns = [
-    
+    path('', lambda request: redirect('/tedxapp/login/')),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('tedxapp/', include('tedxapp.urls')),
