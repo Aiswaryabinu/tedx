@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 from datetime import timedelta
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -76,8 +76,8 @@ REST_FRAMEWORK = {                           #for rest framework settings
 SOCIALACCOUNT_PROVIDERS = {
     'google': { 
       'APP' : {
-        'client_id': '618720554078-a460r0r6od4oimmq1ss0fqaqar5a4b57.apps.googleusercontent.com',
-        'secret' : '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',
+        'client_id': os.getenv("GOOGLE_OAUTH_CLIENT_ID"),
+        'secret' : os.getenv("GOOGLE_OAUTH_CLIENT_SECRET"),
         'key' : ''
       } }}
 
