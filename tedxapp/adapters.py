@@ -2,7 +2,8 @@ from allauth.account.adapter import DefaultAccountAdapter
 from django.shortcuts import redirect
 
 """
-Custom account adapter to redirect users based on their role after login."""
+Custom account adapter to redirect 
+users based on their role after login."""
 
 class CustomAccountAdapter(DefaultAccountAdapter):
     def get_login_redirect_url(self, request):
