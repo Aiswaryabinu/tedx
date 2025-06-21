@@ -76,8 +76,8 @@ REST_FRAMEWORK = {                           #for rest framework settings
 SOCIALACCOUNT_PROVIDERS = {
     'google': { 
       'APP' : {
-        'client_id': '15009696707-ne4kfehc3o8k0d7oaikr3q8p7vhhdh9a.apps.googleusercontent.com',
-        'secret' : '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',
+        'client_id': '618720554078-a460r0r6od4oimmq1ss0fqaqar5a4b57.apps.googleusercontent.com',
+        'secret' : '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',
         'key' : ''
       } }}
 
