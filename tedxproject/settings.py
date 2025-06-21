@@ -177,6 +177,6 @@ AUTH_USER_MODEL = 'tedxapp.CustomUser'
 
 ACCOUNT_ADAPTER = 'tedxapp.adapters.CustomAccountAdapter'
 
-CSRF_TRUSTED_ORIGINS = [ '*'
-    #"https://tedx-production.up.railway.app",
+CSRF_TRUSTED_ORIGINS = [ 
+    "https://tedx-production.up.railway.app",
 ]
