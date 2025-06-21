@@ -2,6 +2,9 @@
 
 A Django-based web application with user registration, login, role-based dashboards, and Google authentication.
 
+
+This project is a full-stack web application built using Django, designed to manage TEDx events with secure user authentication and role-based access. It leverages Django's built-in authentication system, extends it with `django-allauth` for Google OAuth integration, and uses Django REST Framework along with JWT (`djangorestframework-simplejwt`) for API authentication. The app supports user registration with role selection (Admin/User), separate dashboards for each role, and a simple SQLite database for storage. Environment variables are managed with `python-dotenv` for security and flexibility. The project structure and templates are organized for
+
 ## Features
 
 - User registration with role selection (Admin/User)
