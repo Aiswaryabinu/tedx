@@ -41,7 +41,14 @@
           <label for="password2" class="form-label">Confirm Password</label>
           <input type="password" name="password2" class="form-control" id="password2" required>
         </div>
-
+        <div class="mb-3">
+          <label for="role" class="form-label">Select Role</label>
+          <select name="role" class="form-control" id="role" required>
+          <option value="">-- Select Role --</option>
+          <option value="admin">Admin</option>
+          <option value="user">User</option>
+          </select>
+        </div>
         <div class="d-grid">
           <button type="submit" class="btn btn-primary">Register</button>
         </div>
@@ -57,7 +64,7 @@
 
       <div class="text-center mt-3">
         <p class="small">Already have an account? 
-          <a href="http://127.0.0.1:8000/login/">Login here</a>
+          <a href="http://127.0.0.1:8000/tedxapp/login/">Login here</a>
         </p>
       </div>
     </div>

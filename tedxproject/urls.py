@@ -20,17 +20,18 @@ from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
-from tedxapp.views import RegisterView, LoginView , DashboardView
+from tedxapp.views import RegisterView, LoginView 
+from django.shortcuts import redirect
 
 urlpatterns = [
     
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
-    path('', include('tedxapp.urls')),
+    path('tedxapp/', include('tedxapp.urls')),
     path('api/auth/register/', RegisterView.as_view(), name='auth_register'),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/auth/login/',LoginView.as_view(), name='auth_login'),
-    path('api/dashboard/', DashboardView.as_view(), name='dashboard'),
+   # path('api/dashboard/', DashboardView.as_view(), name='dashboard'),
     path('tedxapp/',include('django.contrib.auth.urls'))
 ]

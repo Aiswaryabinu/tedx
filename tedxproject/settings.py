@@ -31,8 +31,8 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
-    'django.contrib.admin',
+INSTALLED_APPS = [                                     #added app,things needed for google integration,rest framework and allauth
+    'django.contrib.admin',  
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE = [                                            
     'allauth.account.middleware.AccountMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -60,7 +60,7 @@ MIDDLEWARE = [
 
 ]
 
-REST_FRAMEWORK = {
+REST_FRAMEWORK = {                           #for rest framework settings
     
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
@@ -70,6 +70,8 @@ REST_FRAMEWORK = {
     ),
    
 }
+
+"""for google social authentication"""
 
 SOCIALACCOUNT_PROVIDERS = {
     'google': { 
@@ -160,8 +162,14 @@ SOCIALACCOUNT_LOGIN_ON_GET = True
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_REDIRECT_URL = '/'
 
-SIMPLE_JWT = {
+ 
+SIMPLE_JWT = {                                            #jwt settings for token authentication
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
     'ROTATE_REFRESH_TOKENS': True, 
     'BLACKLIST_AFTER_ROTATION': True,}
+
+
+AUTH_USER_MODEL = 'tedxapp.CustomUser'
+
+ACCOUNT_ADAPTER = 'tedxapp.adapters.CustomAccountAdapter'
